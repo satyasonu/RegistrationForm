@@ -34,7 +34,7 @@ public class RegistartionForm implements ActionListener {
     public void createWindow()
     {
         frame=new JFrame();
-        frame.setTitle("Registration Form");
+        frame.setTitle("Applicant Registration Form");
         frame.setBounds(40,40,380,600);
         frame.getContentPane().setBackground(Color.pink);
         frame.getContentPane().setLayout(null);
