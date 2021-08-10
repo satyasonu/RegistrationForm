@@ -5,6 +5,7 @@ import java.sql.*;
 
 public class RegistartionForm implements ActionListener {
     JFrame frame;
+        
     String[] gender={"Male","Female"};
     JLabel nameLabel=new JLabel("NAME");
     JLabel genderLabel=new JLabel("GENDER");
@@ -22,6 +23,7 @@ public class RegistartionForm implements ActionListener {
     JTextField emailTextField=new JTextField();
     JButton registerButton=new JButton("REGISTER");
     JButton resetButton=new JButton("RESET");
+    JButton loginButton = new JButton("LOGIN");
 
 
     RegistartionForm()
@@ -60,6 +62,7 @@ public class RegistartionForm implements ActionListener {
         emailTextField.setBounds(180,343,165,23);
         registerButton.setBounds(70,400,100,35);
         resetButton.setBounds(220,400,100,35);
+        loginButton.setBounds(165,450,100,35);
     }
     public void addComponentsToFrame()
     {
@@ -79,12 +82,14 @@ public class RegistartionForm implements ActionListener {
         frame.add(emailTextField);
         frame.add(registerButton);
         frame.add(resetButton);
+        frame.add(loginButton);
     }
     public void actionEvent()
     {
        //Adding Action Listener to buttons
         registerButton.addActionListener(this);
         resetButton.addActionListener(this);
+        loginButton.addActionListener(this);
     }
 
 
@@ -133,6 +138,10 @@ public class RegistartionForm implements ActionListener {
             confirmPasswordField.setText("");
             cityTextField.setText("");
             emailTextField.setText("");
+        }
+        if(e.getSource()==loginButton) {
+        	new LoginForm();
+        	frame.dispose();
         }
 
     }
