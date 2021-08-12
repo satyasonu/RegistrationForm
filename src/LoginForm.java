@@ -75,6 +75,8 @@ public class LoginForm implements ActionListener {
 	                if(rs.next()) {
 	                	//frame2.dispose();
 	                	JOptionPane.showMessageDialog(null, "You have logged in successfully");
+	                	new FetchData();
+	                	frame2.dispose();
 	                	
 	                }
 	                else {
